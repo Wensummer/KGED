@@ -1,0 +1,10 @@
+{
+  "dataset": "nell995",
+  "num_nodes": 75692,
+  "num_edges": 154213,
+  "splits": [
+    "train",
+    "dev",
+    "test"
+  ]
+}

@@ -1,0 +1,345 @@
+=== idx=181 === Triple(h_id='04378842', r_id='_instance_hypernym', t_id='04407435')
+label=0 score=0.008366584777832031
+INTERNAL: 04378842 _instance_hypernym 04407435 split=train
+INTERNAL: 09147046 _has_part 04378842 split=test
+INTERNAL: 04407435 _hypernym 03953416 split=train
+INTERNAL: 04407435 _hypernym 08367100 split=anomaly
+INTERNAL: 04378842 _instance_hypernym 04407435 split=train
+INTERNAL: 03884778 _hypernym 04407435 split=train
+DOC 04378842::0 According to the Hebrew Bible, the tabernacle, also known as the Tent of the Congregation, was the portable earthly dwelling of God used by the Israelites from the Exodus until the conquest of Canaan. Moses was instructed at Mount Sinai to construct and transport the tabernacle with the Israelites o...
+DOC 04407435::0 A temple is a place of worship, a building used for spiritual rituals and activities such as prayer and sacrifice. By convention, the specially built places of worship for some religions are commonly called "temples" in English, while those of other religions are not, even though they fulfill very s...
+------------------------------------------------------------
+=== idx=182 === Triple(h_id='11065345', r_id='_instance_hypernym', t_id='10030277')
+label=0 score=0.14633232355117798
+INTERNAL: 11065345 _instance_hypernym 10363573 split=train
+INTERNAL: 11065345 _instance_hypernym 10444194 split=train
+INTERNAL: 11065345 _instance_hypernym 10030277 split=test
+INTERNAL: 01149470 _derivationally_related_form 11065345 split=anomaly
+INTERNAL: 10030277 _hypernym 10794014 split=train
+INTERNAL: 10030277 _derivationally_related_form 07007945 split=train
+INTERNAL: 10030277 _derivationally_related_form 06376154 split=train
+INTERNAL: 10030277 _derivationally_related_form 01701311 split=train
+INTERNAL: 10928140 _instance_hypernym 10030277 split=train
+INTERNAL: 11282286 _instance_hypernym 10030277 split=train
+INTERNAL: 11386346 _instance_hypernym 10030277 split=train
+INTERNAL: 01701311 _derivationally_related_form 10030277 split=train
+INTERNAL: 10894652 _instance_hypernym 10030277 split=train
+INTERNAL: 10913641 _instance_hypernym 10030277 split=train
+INTERNAL: 06376154 _derivationally_related_form 10030277 split=train
+INTERNAL: 10998651 _instance_hypernym 10030277 split=train
+INTERNAL: 11292391 _instance_hypernym 10030277 split=train
+INTERNAL: 11358065 _instance_hypernym 10030277 split=train
+INTERNAL: 11070644 _instance_hypernym 10030277 split=train
+INTERNAL: 11386692 _instance_hypernym 10030277 split=train
+INTERNAL: 07007945 _derivationally_related_form 10030277 split=train
+INTERNAL: 11011764 _instance_hypernym 10030277 split=train
+INTERNAL: 11295196 _instance_hypernym 10030277 split=train
+INTERNAL: 10889032 _instance_hypernym 10030277 split=train
+INTERNAL: 11034596 _instance_hypernym 10030277 split=train
+INTERNAL: 11004106 _instance_hypernym 10030277 split=train
+INTERNAL: 11327744 _instance_hypernym 10030277 split=train
+INTERNAL: 11295936 _instance_hypernym 10030277 split=train
+INTERNAL: 11402463 _instance_hypernym 10030277 split=train
+INTERNAL: 10835022 _instance_hypernym 10030277 split=test
+INTERNAL: 11065345 _instance_hypernym 10030277 split=test
+DOC 11065345::0 Victor-Marie Hugo, vicomte Hugo was a French Romantic author, poet, essayist, playwright, journalist, human rights activist and politician.
+------------------------------------------------------------
+=== idx=183 === Triple(h_id='09454265', r_id='_instance_hypernym', t_id='09215664')
+label=0 score=0.29971086978912354
+INTERNAL: 09454265 _instance_hypernym 09215664 split=test
+INTERNAL: 09298698 _has_part 09454265 split=train
+INTERNAL: 09071690 _has_part 09454265 split=train
+INTERNAL: 09215664 _hypernym 09225146 split=train
+INTERNAL: 09358096 _instance_hypernym 09215664 split=train
+INTERNAL: 09426788 _has_part 09215664 split=train
+INTERNAL: 09226209 _instance_hypernym 09215664 split=train
+INTERNAL: 09380446 _instance_hypernym 09215664 split=train
+INTERNAL: 09264425 _instance_hypernym 09215664 split=train
+INTERNAL: 09370383 _instance_hypernym 09215664 split=train
+INTERNAL: 09427876 _instance_hypernym 09215664 split=train
+INTERNAL: 09356781 _instance_hypernym 09215664 split=train
+INTERNAL: 09243405 _instance_hypernym 09215664 split=train
+INTERNAL: 09365730 _instance_hypernym 09215664 split=train
+INTERNAL: 09221723 _instance_hypernym 09215664 split=train
+INTERNAL: 09286318 _instance_hypernym 09215664 split=train
+INTERNAL: 09454265 _instance_hypernym 09215664 split=test
+INTERNAL: 08726582 _instance_hypernym 09215664 split=anomaly
+INTERNAL: 09164903 _instance_hypernym 09215664 split=anomaly
+DOC 09215664::0 A bay is a recessed, coastal body of water that directly connects to a larger main body of water, such as an ocean, a lake, or another bay. A large bay is usually called a gulf, sea, sound, or bight. A cove is a small, circular bay with a narrow entrance. A fjord is an elongated bay formed by glacia...
+------------------------------------------------------------
+=== idx=184 === Triple(h_id='14425974', r_id='_derivationally_related_form', t_id='09871095')
+label=1 score=0.9982599392533302
+INTERNAL: 14425974 _derivationally_related_form 01493897 split=train
+INTERNAL: 14425974 _derivationally_related_form 01489722 split=train
+INTERNAL: 14425974 _hypernym 00024720 split=train
+INTERNAL: 14425974 _derivationally_related_form 01646941 split=train
+INTERNAL: 14425974 _derivationally_related_form 09871095 split=anomaly
+INTERNAL: 14426449 _hypernym 14425974 split=train
+INTERNAL: 01493897 _derivationally_related_form 14425974 split=train
+INTERNAL: 14427065 _hypernym 14425974 split=train
+INTERNAL: 01646941 _derivationally_related_form 14425974 split=train
+INTERNAL: 01489722 _derivationally_related_form 14425974 split=train
+INTERNAL: 14427239 _hypernym 14425974 split=train
+INTERNAL: 09871095 _derivationally_related_form 01415585 split=train
+INTERNAL: 09871095 _hypernym 09870208 split=train
+INTERNAL: 01415585 _derivationally_related_form 09871095 split=train
+INTERNAL: 14425974 _derivationally_related_form 09871095 split=anomaly
+DOC 09871095::0 A slugger most often means a baseball or softball player with a high slugging percentage.
+------------------------------------------------------------
+=== idx=185 === Triple(h_id='12372233', r_id='_has_part', t_id='12372520')
+label=0 score=0.003800690174102783
+INTERNAL: 12372233 _hypernym 13112664 split=train
+INTERNAL: 12372233 _has_part 12372520 split=train
+INTERNAL: 12372124 _member_meronym 12372233 split=train
+INTERNAL: 12235263 _member_meronym 12372233 split=anomaly
+INTERNAL: 12372520 _hypernym 13162297 split=train
+INTERNAL: 12372233 _has_part 12372520 split=train
+------------------------------------------------------------
+=== idx=186 === Triple(h_id='09188609', r_id='_has_part', t_id='08790748')
+label=0 score=0.004771113395690918
+INTERNAL: 09188609 _has_part 08782627 split=train
+INTERNAL: 09188609 _has_part 08790748 split=train
+INTERNAL: 09188609 _instance_hypernym 09426788 split=test
+INTERNAL: 09350045 _has_part 09188609 split=train
+INTERNAL: 08790748 _instance_hypernym 09316454 split=train
+INTERNAL: 09188609 _has_part 08790748 split=train
+INTERNAL: 08780881 _has_part 08790748 split=train
+DOC 08790748::0 Lemnos or Limnos is a Greek island in the northern Aegean Sea. Administratively the island forms a separate municipality within the Lemnos regional unit, which is part of the North Aegean region. The principal town of the island and seat of the municipality is Myrina. At 477.583 square kilometres (1...
+DOC 09188609::0 The Aegean Sea is an elongated embayment of the Mediterranean Sea between Europe and Asia. It is located between the Balkans and Anatolia, and covers an area of some 215,000 km2 (83,000 sq mi). In the north, the Aegean is connected to the Marmara Sea, which in turn connects to the Black Sea, by the ...
+------------------------------------------------------------
+=== idx=187 === Triple(h_id='11786539', r_id='_has_part', t_id='11786843')
+label=0 score=0.0043332576751708984
+INTERNAL: 11786539 _has_part 11786843 split=train
+INTERNAL: 11786539 _has_part 07736813 split=train
+INTERNAL: 11786539 _hypernym 11779300 split=dev
+INTERNAL: 11786539 _derivationally_related_form 01201021 split=anomaly
+INTERNAL: 11786365 _member_meronym 11786539 split=train
+INTERNAL: 11786843 _hypernym 13125117 split=train
+INTERNAL: 11786539 _has_part 11786843 split=train
+DOC 11786539::0 Taro is a root vegetable. It is the most widely cultivated species of several plants in the family Araceae that are used as vegetables for their corms, leaves, stems and petioles. Taro corms are a food staple in African, Oceanian, East Asian, Southeast Asian and South Asian cultures.
+------------------------------------------------------------
+=== idx=188 === Triple(h_id='09999135', r_id='_derivationally_related_form', t_id='06718543')
+label=1 score=0.9996549445495475
+INTERNAL: 09999135 _hypernym 10009671 split=train
+INTERNAL: 09999135 _derivationally_related_form 00847683 split=train
+INTERNAL: 09999135 _derivationally_related_form 00907657 split=train
+INTERNAL: 09999135 _derivationally_related_form 00846509 split=train
+INTERNAL: 09999135 _derivationally_related_form 00848169 split=train
+INTERNAL: 09999135 _derivationally_related_form 00847870 split=test
+INTERNAL: 09999135 _derivationally_related_form 06718543 split=anomaly
+INTERNAL: 00907657 _derivationally_related_form 09999135 split=train
+INTERNAL: 00846509 _derivationally_related_form 09999135 split=train
+INTERNAL: 00847683 _derivationally_related_form 09999135 split=train
+INTERNAL: 00848169 _derivationally_related_form 09999135 split=train
+INTERNAL: 00847870 _derivationally_related_form 09999135 split=train
+INTERNAL: 06718543 _derivationally_related_form 00846509 split=train
+INTERNAL: 06718543 _hypernym 06717170 split=train
+INTERNAL: 00846509 _derivationally_related_form 06718543 split=train
+INTERNAL: 06718862 _hypernym 06718543 split=train
+INTERNAL: 09999135 _derivationally_related_form 06718543 split=anomaly
+DOC 06718543::0 Slur may refer to:Slur (music), a symbol in Western musical notation indicating that the notes it embraces are to be played without separation Pejorative, a term expressing a negative or disrespectful connotation, a low opinion, or a lack of respect toward someone or potentially something Ethnic slu...
+------------------------------------------------------------
+=== idx=189 === Triple(h_id='00907930', r_id='_verb_group', t_id='01042531')
+label=0 score=0.005556285381317139
+INTERNAL: 00907930 _derivationally_related_form 07211752 split=train
+INTERNAL: 00907930 _derivationally_related_form 10776339 split=train
+INTERNAL: 00907930 _hypernym 00907147 split=train
+INTERNAL: 00907930 _verb_group 01042531 split=train
+INTERNAL: 10776339 _derivationally_related_form 00907930 split=train
+INTERNAL: 07211752 _derivationally_related_form 00907930 split=train
+INTERNAL: 01042531 _verb_group 00907930 split=test
+INTERNAL: 01042531 _hypernym 00941990 split=train
+INTERNAL: 01042531 _derivationally_related_form 00868523 split=train
+INTERNAL: 01042531 _derivationally_related_form 07211752 split=train
+INTERNAL: 01042531 _derivationally_related_form 10776339 split=train
+INTERNAL: 01042531 _verb_group 00907930 split=test
+INTERNAL: 00868523 _derivationally_related_form 01042531 split=train
+INTERNAL: 00907930 _verb_group 01042531 split=train
+INTERNAL: 07211752 _derivationally_related_form 01042531 split=train
+INTERNAL: 10776339 _derivationally_related_form 01042531 split=train
+------------------------------------------------------------
+=== idx=190 === Triple(h_id='04865502', r_id='_hypernym', t_id='00582388')
+label=1 score=0.9987398143857718
+INTERNAL: 04865502 _derivationally_related_form 00722232 split=train
+INTERNAL: 04865502 _hypernym 04865114 split=dev
+INTERNAL: 04865502 _also_see 04865114 split=anomaly
+INTERNAL: 04865502 _hypernym 00582388 split=anomaly
+INTERNAL: 04865722 _hypernym 04865502 split=train
+INTERNAL: 00722232 _derivationally_related_form 04865502 split=train
+INTERNAL: 00582388 _derivationally_related_form 00600370 split=train
+INTERNAL: 00582388 _hypernym 00407535 split=train
+INTERNAL: 00582388 _derivationally_related_form 02870453 split=anomaly
+INTERNAL: 00453731 _hypernym 00582388 split=train
+INTERNAL: 00606370 _hypernym 00582388 split=train
+INTERNAL: 00610222 _hypernym 00582388 split=train
+INTERNAL: 00584367 _hypernym 00582388 split=train
+INTERNAL: 00583089 _hypernym 00582388 split=train
+INTERNAL: 00586262 _hypernym 00582388 split=train
+INTERNAL: 00620554 _hypernym 00582388 split=train
+INTERNAL: 00583246 _hypernym 00582388 split=train
+INTERNAL: 00606119 _hypernym 00582388 split=train
+INTERNAL: 00600370 _derivationally_related_form 00582388 split=train
+INTERNAL: 00433216 _hypernym 00582388 split=train
+INTERNAL: 00609953 _hypernym 00582388 split=dev
+INTERNAL: 00618734 _hypernym 00582388 split=dev
+INTERNAL: 11748936 _hypernym 00582388 split=anomaly
+INTERNAL: 00712225 _hypernym 00582388 split=anomaly
+INTERNAL: 07443761 _hypernym 00582388 split=anomaly
+INTERNAL: 03691128 _hypernym 00582388 split=anomaly
+INTERNAL: 04865502 _hypernym 00582388 split=anomaly
+------------------------------------------------------------
+=== idx=191 === Triple(h_id='08848094', r_id='_member_meronym', t_id='09691858')
+label=0 score=0.003021836280822754
+INTERNAL: 08848094 _member_meronym 09691858 split=train
+INTERNAL: 08848094 _instance_hypernym 08700255 split=train
+INTERNAL: 08172103 _member_meronym 08848094 split=train
+INTERNAL: 08910394 _has_part 08848094 split=train
+INTERNAL: 09207288 _has_part 08848094 split=test
+INTERNAL: 09691858 _hypernym 09729530 split=train
+INTERNAL: 08848094 _member_meronym 09691858 split=train
+INTERNAL: 03654374 _member_meronym 09691858 split=anomaly
+------------------------------------------------------------
+=== idx=192 === Triple(h_id='01736569', r_id='_member_meronym', t_id='01736796')
+label=0 score=0.942542277276516
+INTERNAL: 01736569 _hypernym 01657723 split=train
+INTERNAL: 01736569 _member_meronym 01736796 split=test
+INTERNAL: 01726960 _member_meronym 01736569 split=train
+INTERNAL: 01736796 _hypernym 01727646 split=train
+INTERNAL: 01736569 _member_meronym 01736796 split=test
+------------------------------------------------------------
+=== idx=193 === Triple(h_id='02016956', r_id='_hypernym', t_id='02016358')
+label=0 score=0.003232121467590332
+INTERNAL: 02016956 _hypernym 02016358 split=dev
+INTERNAL: 02016358 _hypernym 01844917 split=train
+INTERNAL: 02016659 _hypernym 02016358 split=train
+INTERNAL: 02016816 _hypernym 02016358 split=train
+INTERNAL: 02016198 _member_meronym 02016358 split=train
+INTERNAL: 02016956 _hypernym 02016358 split=dev
+INTERNAL: 04734885 _hypernym 02016358 split=anomaly
+DOC 02016956::0 The purple gallinule is a species of swamphen found in the Americas. It is in the order Gruiformes, meaning "crane-like", an order which also contains cranes, rails, and crakes. The purple gallinule is a rail species, placing it into the family Rallidae. It is also known locally as the yellow-legged...
+DOC 02016358::0 Waterhen may refer to:Common moorhen or common waterhen, a bird species in the rail family Amaurornis rails, a genus of birds in the rail family Various other birds of the family Rallidae (rails) may be informally called waterhens Waterhen Indian Reserve No. 45, Northern Affairs Community in the Can...
+------------------------------------------------------------
+=== idx=194 === Triple(h_id='08968677', r_id='_has_part', t_id='08968879')
+label=0 score=0.003226339817047119
+INTERNAL: 08968677 _derivationally_related_form 03087088 split=train
+INTERNAL: 08968677 _has_part 08968879 split=train
+INTERNAL: 08968677 _instance_hypernym 08574314 split=train
+INTERNAL: 03087088 _derivationally_related_form 08968677 split=train
+INTERNAL: 09207288 _has_part 08968677 split=train
+INTERNAL: 08968879 _has_part 08969123 split=train
+INTERNAL: 08968879 _has_part 09169801 split=train
+INTERNAL: 08968879 _instance_hypernym 08700255 split=train
+INTERNAL: 09207288 _has_part 08968879 split=train
+INTERNAL: 08968677 _has_part 08968879 split=train
+DOC 08968677::0 Mongolia is a landlocked country in East Asia. Bordered by Russia to the north and China to the south and southeast, it covers an area of 1,564,116 square kilometres, making it the 18th-largest country in the world and the second largest landlocked country after Kazakhstan, as well as the largest la...
+------------------------------------------------------------
+=== idx=195 === Triple(h_id='06436717', r_id='_instance_hypernym', t_id='08177958')
+label=1 score=0.9984360096277669
+INTERNAL: 06436717 _instance_hypernym 06394865 split=train
+INTERNAL: 06436717 _instance_hypernym 08177958 split=anomaly
+INTERNAL: 06453324 _has_part 06436717 split=train
+INTERNAL: 06449735 _has_part 06436717 split=train
+INTERNAL: 08177958 _hypernym 08168978 split=train
+INTERNAL: 08919949 _instance_hypernym 08177958 split=train
+INTERNAL: 06436717 _instance_hypernym 08177958 split=anomaly
+DOC 08177958::0 A city-state is an independent sovereign city which serves as the center of political, economic, and cultural life over its contiguous territory, as opposed to a regular state or country comprising a capital city and other cities and/or a countryside. City-states have existed in many parts of the wo...
+------------------------------------------------------------
+=== idx=196 === Triple(h_id='01479643', r_id='_hypernym', t_id='08103777')
+label=0 score=0.8852863684296608
+INTERNAL: 01479643 _hypernym 08103777 split=test
+INTERNAL: 01471070 _member_meronym 01479643 split=train
+INTERNAL: 08103777 _member_meronym 08106934 split=train
+INTERNAL: 08103777 _derivationally_related_form 00654625 split=train
+INTERNAL: 08103777 _hypernym 07992450 split=train
+INTERNAL: 08103777 _derivationally_related_form 00739662 split=train
+INTERNAL: 08103777 _synset_domain_topic_of 06037666 split=train
+INTERNAL: 08103777 _member_meronym 02155248 split=anomaly
+INTERNAL: 08103777 _hypernym 04679738 split=anomaly
+INTERNAL: 12996841 _hypernym 08103777 split=train
+INTERNAL: 12975608 _hypernym 08103777 split=train
+INTERNAL: 01515811 _hypernym 08103777 split=train
+INTERNAL: 01695259 _hypernym 08103777 split=train
+INTERNAL: 11599694 _hypernym 08103777 split=train
+INTERNAL: 12212810 _hypernym 08103777 split=train
+INTERNAL: 01422594 _hypernym 08103777 split=train
+INTERNAL: 02317983 _hypernym 08103777 split=train
+INTERNAL: 01955463 _hypernym 08103777 split=train
+INTERNAL: 11667562 _hypernym 08103777 split=train
+INTERNAL: 13038944 _hypernym 08103777 split=train
+INTERNAL: 01768969 _hypernym 08103777 split=train
+INTERNAL: 01969103 _hypernym 08103777 split=train
+INTERNAL: 01425817 _hypernym 08103777 split=train
+INTERNAL: 01625747 _hypernym 08103777 split=train
+INTERNAL: 01394901 _hypernym 08103777 split=train
+INTERNAL: 12996068 _hypernym 08103777 split=train
+INTERNAL: 01925133 _hypernym 08103777 split=train
+INTERNAL: 01407465 _hypernym 08103777 split=train
+INTERNAL: 01954202 _hypernym 08103777 split=train
+INTERNAL: 01479937 _hypernym 08103777 split=train
+INTERNAL: 01389875 _hypernym 08103777 split=train
+INTERNAL: 01975312 _hypernym 08103777 split=train
+INTERNAL: 02527813 _hypernym 08103777 split=train
+INTERNAL: 11667112 _hypernym 08103777 split=train
+INTERNAL: 11604698 _hypernym 08103777 split=train
+INTERNAL: 01783384 _hypernym 08103777 split=train
+INTERNAL: 01468532 _hypernym 08103777 split=train
+INTERNAL: 01413744 _hypernym 08103777 split=train
+INTERNAL: 01998019 _hypernym 08103777 split=train
+INTERNAL: 02319967 _hypernym 08103777 split=train
+INTERNAL: 01974399 _hypernym 08103777 split=train
+INTERNAL: 01421164 _hypernym 08103777 split=train
+INTERNAL: 01661404 _hypernym 08103777 split=train
+INTERNAL: 01937719 _hypernym 08103777 split=train
+INTERNAL: 01719175 _hypernym 08103777 split=train
+INTERNAL: 01480336 _hypernym 08103777 split=train
+INTERNAL: 12358485 _hypernym 08103777 split=train
+INTERNAL: 01390287 _hypernym 08103777 split=train
+INTERNAL: 01391174 _hypernym 08103777 split=train
+INTERNAL: 11668952 _hypernym 08103777 split=train
+------------------------------------------------------------
+=== idx=197 === Triple(h_id='15181718', r_id='_has_part', t_id='15241777')
+label=0 score=0.4397575855255127
+INTERNAL: 15181718 _hypernym 15174218 split=train
+INTERNAL: 15181718 _has_part 15242719 split=train
+INTERNAL: 15181718 _has_part 15242029 split=train
+INTERNAL: 15181718 _has_part 15241777 split=test
+INTERNAL: 15181718 _has_part 00526259 split=anomaly
+INTERNAL: 15181718 _has_part 08858713 split=anomaly
+INTERNAL: 15181718 _hypernym 15155220 split=anomaly
+INTERNAL: 15241777 _hypernym 15239292 split=train
+INTERNAL: 15181718 _has_part 15241777 split=test
+------------------------------------------------------------
+=== idx=198 === Triple(h_id='02685951', r_id='_also_see', t_id='02685665')
+label=0 score=0.003809809684753418
+INTERNAL: 02685951 _also_see 02703539 split=train
+INTERNAL: 02685951 _derivationally_related_form 05123416 split=train
+INTERNAL: 02685951 _verb_group 02727039 split=train
+INTERNAL: 02685951 _also_see 02685665 split=train
+INTERNAL: 02685951 _hypernym 02655135 split=train
+INTERNAL: 02727039 _verb_group 02685951 split=train
+INTERNAL: 05123416 _derivationally_related_form 02685951 split=train
+INTERNAL: 02733673 _hypernym 02685951 split=train
+INTERNAL: 02686952 _hypernym 02685951 split=train
+INTERNAL: 02685665 _derivationally_related_form 07409592 split=train
+INTERNAL: 02685665 _hypernym 02655135 split=train
+INTERNAL: 02685665 _derivationally_related_form 08628921 split=train
+INTERNAL: 02685665 _also_see 02690093 split=train
+INTERNAL: 02685951 _also_see 02685665 split=train
+INTERNAL: 08628921 _derivationally_related_form 02685665 split=train
+INTERNAL: 07409592 _derivationally_related_form 02685665 split=test
+DOC 02685951::0 Run(s) or RUN may refer to:
+DOC 02685665::0 The somatosensory system, or somatic sensory system, is a subset of the sensory nervous system. The main functions of the somatosensory system are the perception of external stimuli, the perception of internal stimuli, and the regulation of body position and balance (proprioception). It is believed ...
+------------------------------------------------------------
+=== idx=199 === Triple(h_id='07906284', r_id='_hypernym', t_id='11807979')
+label=1 score=0.9980628747725859
+INTERNAL: 07906284 _hypernym 07901587 split=train
+INTERNAL: 07906284 _hypernym 11807979 split=anomaly
+INTERNAL: 07906877 _hypernym 07906284 split=train
+INTERNAL: 07907548 _hypernym 07906284 split=train
+INTERNAL: 07907161 _hypernym 07906284 split=test
+INTERNAL: 11807979 _hypernym 11669921 split=train
+INTERNAL: 11808721 _hypernym 11807979 split=train
+INTERNAL: 11807849 _member_meronym 11807979 split=train
+INTERNAL: 07906284 _hypernym 11807979 split=anomaly
+DOC 07906284::0 Whisky or whiskey is a type of liquor made from fermented grain mash. Various grains are used for different varieties, including barley, corn, rye, and wheat. Whisky is typically aged in wooden casks, commonly of charred white oak. Uncharred white oak casks previously used for the aging of port, rum...
+------------------------------------------------------------

@@ -1,0 +1,9 @@
+{
+  "dataset": "nell995",
+  "num_entities": 75492,
+  "num_relations": 200,
+  "num_train": 149678,
+  "num_dev": 543,
+  "num_test": 3992,
+  "num_triples": 154213
+}

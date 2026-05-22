@@ -1,0 +1,602 @@
+{
+  "concept:academicfieldconcernssubject": {
+    "name": "academicfieldconcernssubject"
+  },
+  "concept:academicfieldsuchasacademicfield": {
+    "name": "academicfieldsuchasacademicfield"
+  },
+  "concept:academicprogramatuniversity": {
+    "name": "academicprogramatuniversity"
+  },
+  "concept:acquired": {
+    "name": "acquired"
+  },
+  "concept:actorstarredinmovie": {
+    "name": "actorstarredinmovie"
+  },
+  "concept:agentactsinlocation": {
+    "name": "agentactsinlocation"
+  },
+  "concept:agentbelongstoorganization": {
+    "name": "agentbelongstoorganization"
+  },
+  "concept:agentcollaborateswithagent": {
+    "name": "agentcollaborateswithagent"
+  },
+  "concept:agentcompeteswithagent": {
+    "name": "agentcompeteswithagent"
+  },
+  "concept:agentcontributedtocreativework": {
+    "name": "agentcontributedtocreativework"
+  },
+  "concept:agentcontrols": {
+    "name": "agentcontrols"
+  },
+  "concept:agentcreated": {
+    "name": "agentcreated"
+  },
+  "concept:agentinvolvedwithitem": {
+    "name": "agentinvolvedwithitem"
+  },
+  "concept:agentparticipatedinevent": {
+    "name": "agentparticipatedinevent"
+  },
+  "concept:agriculturalproductcamefromcountry": {
+    "name": "agriculturalproductcamefromcountry"
+  },
+  "concept:agriculturalproductcomingfromvertebrate": {
+    "name": "agriculturalproductcomingfromvertebrate"
+  },
+  "concept:agriculturalproductcontainchemical": {
+    "name": "agriculturalproductcontainchemical"
+  },
+  "concept:agriculturalproductcookedwithagriculturalproduct": {
+    "name": "agriculturalproductcookedwithagriculturalproduct"
+  },
+  "concept:agriculturalproductcutintogeometricshape": {
+    "name": "agriculturalproductcutintogeometricshape"
+  },
+  "concept:agriculturalproductgrowinginstateorprovince": {
+    "name": "agriculturalproductgrowinginstateorprovince"
+  },
+  "concept:agriculturalproductgrowninlandscapefeatures": {
+    "name": "agriculturalproductgrowninlandscapefeatures"
+  },
+  "concept:agriculturalproductincludingagriculturalproduct": {
+    "name": "agriculturalproductincludingagriculturalproduct"
+  },
+  "concept:agriculturalproducttoattractinsect": {
+    "name": "agriculturalproducttoattractinsect"
+  },
+  "concept:airportincity": {
+    "name": "airportincity"
+  },
+  "concept:animaldevelopdisease": {
+    "name": "animaldevelopdisease"
+  },
+  "concept:animaleatfood": {
+    "name": "animaleatfood"
+  },
+  "concept:animaleatvegetable": {
+    "name": "animaleatvegetable"
+  },
+  "concept:animalistypeofanimal": {
+    "name": "animalistypeofanimal"
+  },
+  "concept:animalpreyson": {
+    "name": "animalpreyson"
+  },
+  "concept:animalsuchasfish": {
+    "name": "animalsuchasfish"
+  },
+  "concept:animalsuchasinsect": {
+    "name": "animalsuchasinsect"
+  },
+  "concept:animalsuchasinvertebrate": {
+    "name": "animalsuchasinvertebrate"
+  },
+  "concept:animalthatfeedoninsect": {
+    "name": "animalthatfeedoninsect"
+  },
+  "concept:arterycalledartery": {
+    "name": "arterycalledartery"
+  },
+  "concept:arthropodandotherarthropod": {
+    "name": "arthropodandotherarthropod"
+  },
+  "concept:arthropodcalledarthropod": {
+    "name": "arthropodcalledarthropod"
+  },
+  "concept:atdate": {
+    "name": "atdate"
+  },
+  "concept:athletebeatathlete": {
+    "name": "athletebeatathlete"
+  },
+  "concept:athleteflyouttosportsteamposition": {
+    "name": "athleteflyouttosportsteamposition"
+  },
+  "concept:athletehomestadium": {
+    "name": "athletehomestadium"
+  },
+  "concept:athleteinjuredhisbodypart": {
+    "name": "athleteinjuredhisbodypart"
+  },
+  "concept:athleteledsportsteam": {
+    "name": "athleteledsportsteam"
+  },
+  "concept:athleteplaysforteam": {
+    "name": "athleteplaysforteam"
+  },
+  "concept:athleteplaysinleague": {
+    "name": "athleteplaysinleague"
+  },
+  "concept:athleteplayssport": {
+    "name": "athleteplayssport"
+  },
+  "concept:athleteplayssportsteamposition": {
+    "name": "athleteplayssportsteamposition"
+  },
+  "concept:athletewinsawardtrophytournament": {
+    "name": "athletewinsawardtrophytournament"
+  },
+  "concept:atlocation": {
+    "name": "atlocation"
+  },
+  "concept:attractionofcity": {
+    "name": "attractionofcity"
+  },
+  "concept:automakerproducesmodel": {
+    "name": "automakerproducesmodel"
+  },
+  "concept:automobilemakercardealersinstateorprovince": {
+    "name": "automobilemakercardealersinstateorprovince"
+  },
+  "concept:automobilemakerdealersincity": {
+    "name": "automobilemakerdealersincity"
+  },
+  "concept:automobilemakerdealersincountry": {
+    "name": "automobilemakerdealersincountry"
+  },
+  "concept:awardtrophytournamentisthechampionshipgameofthenationalsport": {
+    "name": "awardtrophytournamentisthechampionshipgameofthenationalsport"
+  },
+  "concept:bacteriaisthecausativeagentofphysiologicalcondition": {
+    "name": "bacteriaisthecausativeagentofphysiologicalcondition"
+  },
+  "concept:bakedgoodservedwithbeverage": {
+    "name": "bakedgoodservedwithbeverage"
+  },
+  "concept:bankbankincountry": {
+    "name": "bankbankincountry"
+  },
+  "concept:bankboughtbank": {
+    "name": "bankboughtbank"
+  },
+  "concept:beveragecontainsprotein": {
+    "name": "beveragecontainsprotein"
+  },
+  "concept:beveragemadefrombeverage": {
+    "name": "beveragemadefrombeverage"
+  },
+  "concept:bodypartcontainsbodypart": {
+    "name": "bodypartcontainsbodypart"
+  },
+  "concept:bookwriter": {
+    "name": "bookwriter"
+  },
+  "concept:buildingfeaturemadefrombuildingmaterial": {
+    "name": "buildingfeaturemadefrombuildingmaterial"
+  },
+  "concept:buildinglocatedincity": {
+    "name": "buildinglocatedincity"
+  },
+  "concept:ceoof": {
+    "name": "ceoof"
+  },
+  "concept:chemicalistypeofchemical": {
+    "name": "chemicalistypeofchemical"
+  },
+  "concept:cityalsoknownas": {
+    "name": "cityalsoknownas"
+  },
+  "concept:citycapitalofcountry": {
+    "name": "citycapitalofcountry"
+  },
+  "concept:cityliesonriver": {
+    "name": "cityliesonriver"
+  },
+  "concept:citylocatedincountry": {
+    "name": "citylocatedincountry"
+  },
+  "concept:citylocatedingeopoliticallocation": {
+    "name": "citylocatedingeopoliticallocation"
+  },
+  "concept:citylocatedinstate": {
+    "name": "citylocatedinstate"
+  },
+  "concept:clothingmadefromplant": {
+    "name": "clothingmadefromplant"
+  },
+  "concept:clothingtogowithclothing": {
+    "name": "clothingtogowithclothing"
+  },
+  "concept:coachesinleague": {
+    "name": "coachesinleague"
+  },
+  "concept:coachesteam": {
+    "name": "coachesteam"
+  },
+  "concept:coachwontrophy": {
+    "name": "coachwontrophy"
+  },
+  "concept:companyalsoknownas": {
+    "name": "companyalsoknownas"
+  },
+  "concept:companyeconomicsector": {
+    "name": "companyeconomicsector"
+  },
+  "concept:competeswith": {
+    "name": "competeswith"
+  },
+  "concept:conceptprerequisiteof": {
+    "name": "conceptprerequisiteof"
+  },
+  "concept:countryalsoknownas": {
+    "name": "countryalsoknownas"
+  },
+  "concept:countrycurrency": {
+    "name": "countrycurrency"
+  },
+  "concept:countrylocatedingeopoliticallocation": {
+    "name": "countrylocatedingeopoliticallocation"
+  },
+  "concept:directordirectedmovie": {
+    "name": "directordirectedmovie"
+  },
+  "concept:drughassideeffect": {
+    "name": "drughassideeffect"
+  },
+  "concept:drugpossiblytreatsphysiologicalcondition": {
+    "name": "drugpossiblytreatsphysiologicalcondition"
+  },
+  "concept:drugworkedonbyagent": {
+    "name": "drugworkedonbyagent"
+  },
+  "concept:emotionassociatedwithdisease": {
+    "name": "emotionassociatedwithdisease"
+  },
+  "concept:fatherofperson": {
+    "name": "fatherofperson"
+  },
+  "concept:fishservedwithfood": {
+    "name": "fishservedwithfood"
+  },
+  "concept:foodcancausedisease": {
+    "name": "foodcancausedisease"
+  },
+  "concept:fooddecreasestheriskofdisease": {
+    "name": "fooddecreasestheriskofdisease"
+  },
+  "concept:furniturefoundinroom": {
+    "name": "furniturefoundinroom"
+  },
+  "concept:hashusband": {
+    "name": "hashusband"
+  },
+  "concept:hasofficeincity": {
+    "name": "hasofficeincity"
+  },
+  "concept:hasofficeincountry": {
+    "name": "hasofficeincountry"
+  },
+  "concept:hassibling": {
+    "name": "hassibling"
+  },
+  "concept:hasspouse": {
+    "name": "hasspouse"
+  },
+  "concept:haswife": {
+    "name": "haswife"
+  },
+  "concept:headquarteredin": {
+    "name": "headquarteredin"
+  },
+  "concept:hobbiessuchashobbies": {
+    "name": "hobbiessuchashobbies"
+  },
+  "concept:hotelincity": {
+    "name": "hotelincity"
+  },
+  "concept:invertebratefeedonfood": {
+    "name": "invertebratefeedonfood"
+  },
+  "concept:ismultipleof": {
+    "name": "ismultipleof"
+  },
+  "concept:istallerthan": {
+    "name": "istallerthan"
+  },
+  "concept:itemfoundinroom": {
+    "name": "itemfoundinroom"
+  },
+  "concept:journalistwritesforpublication": {
+    "name": "journalistwritesforpublication"
+  },
+  "concept:lakeinstate": {
+    "name": "lakeinstate"
+  },
+  "concept:languageofcountry": {
+    "name": "languageofcountry"
+  },
+  "concept:languageofuniversity": {
+    "name": "languageofuniversity"
+  },
+  "concept:latitudelongitude": {
+    "name": "latitudelongitude"
+  },
+  "concept:leaguestadiums": {
+    "name": "leaguestadiums"
+  },
+  "concept:locationlocatedwithinlocation": {
+    "name": "locationlocatedwithinlocation"
+  },
+  "concept:mammalsuchasmammal": {
+    "name": "mammalsuchasmammal"
+  },
+  "concept:motherofperson": {
+    "name": "motherofperson"
+  },
+  "concept:mountaininstate": {
+    "name": "mountaininstate"
+  },
+  "concept:museumincity": {
+    "name": "museumincity"
+  },
+  "concept:musicartistgenre": {
+    "name": "musicartistgenre"
+  },
+  "concept:musicgenressuchasmusicgenres": {
+    "name": "musicgenressuchasmusicgenres"
+  },
+  "concept:musicianinmusicartist": {
+    "name": "musicianinmusicartist"
+  },
+  "concept:musicianplaysinstrument": {
+    "name": "musicianplaysinstrument"
+  },
+  "concept:mutualproxyfor": {
+    "name": "mutualproxyfor"
+  },
+  "concept:newspaperincity": {
+    "name": "newspaperincity"
+  },
+  "concept:objectfoundinscene": {
+    "name": "objectfoundinscene"
+  },
+  "concept:objectpartofobject": {
+    "name": "objectpartofobject"
+  },
+  "concept:organizationacronymhasname": {
+    "name": "organizationacronymhasname"
+  },
+  "concept:organizationalsoknownas": {
+    "name": "organizationalsoknownas"
+  },
+  "concept:organizationdissolvedatdate": {
+    "name": "organizationdissolvedatdate"
+  },
+  "concept:organizationheadquarteredincity": {
+    "name": "organizationheadquarteredincity"
+  },
+  "concept:organizationheadquarteredincountry": {
+    "name": "organizationheadquarteredincountry"
+  },
+  "concept:organizationheadquarteredinstateorprovince": {
+    "name": "organizationheadquarteredinstateorprovince"
+  },
+  "concept:organizationhiredperson": {
+    "name": "organizationhiredperson"
+  },
+  "concept:organizationterminatedperson": {
+    "name": "organizationterminatedperson"
+  },
+  "concept:parentofperson": {
+    "name": "parentofperson"
+  },
+  "concept:parkincity": {
+    "name": "parkincity"
+  },
+  "concept:personalsoknownas": {
+    "name": "personalsoknownas"
+  },
+  "concept:personbelongstoorganization": {
+    "name": "personbelongstoorganization"
+  },
+  "concept:personbornincity": {
+    "name": "personbornincity"
+  },
+  "concept:personborninlocation": {
+    "name": "personborninlocation"
+  },
+  "concept:personchargedwithcrime": {
+    "name": "personchargedwithcrime"
+  },
+  "concept:persondiedatage": {
+    "name": "persondiedatage"
+  },
+  "concept:persondiedincountry": {
+    "name": "persondiedincountry"
+  },
+  "concept:persongraduatedfromuniversity": {
+    "name": "persongraduatedfromuniversity"
+  },
+  "concept:persongraduatedschool": {
+    "name": "persongraduatedschool"
+  },
+  "concept:personhascitizenship": {
+    "name": "personhascitizenship"
+  },
+  "concept:personhasjobposition": {
+    "name": "personhasjobposition"
+  },
+  "concept:personhasresidenceingeopoliticallocation": {
+    "name": "personhasresidenceingeopoliticallocation"
+  },
+  "concept:personleadsgeopoliticalorganization": {
+    "name": "personleadsgeopoliticalorganization"
+  },
+  "concept:personleadsorganization": {
+    "name": "personleadsorganization"
+  },
+  "concept:personmovedtostateorprovince": {
+    "name": "personmovedtostateorprovince"
+  },
+  "concept:plantgrowinginplant": {
+    "name": "plantgrowinginplant"
+  },
+  "concept:plantincludeplant": {
+    "name": "plantincludeplant"
+  },
+  "concept:plantrepresentemotion": {
+    "name": "plantrepresentemotion"
+  },
+  "concept:politicianholdsoffice": {
+    "name": "politicianholdsoffice"
+  },
+  "concept:politicianrepresentslocation": {
+    "name": "politicianrepresentslocation"
+  },
+  "concept:politicianusendorsedbypoliticianus": {
+    "name": "politicianusendorsedbypoliticianus"
+  },
+  "concept:politicianusholdsoffice": {
+    "name": "politicianusholdsoffice"
+  },
+  "concept:politicianusmemberofpoliticalgroup": {
+    "name": "politicianusmemberofpoliticalgroup"
+  },
+  "concept:producesproduct": {
+    "name": "producesproduct"
+  },
+  "concept:professionistypeofprofession": {
+    "name": "professionistypeofprofession"
+  },
+  "concept:professionusestool": {
+    "name": "professionusestool"
+  },
+  "concept:proxyfor": {
+    "name": "proxyfor"
+  },
+  "concept:radiostationincity": {
+    "name": "radiostationincity"
+  },
+  "concept:riveremptiesintoriver": {
+    "name": "riveremptiesintoriver"
+  },
+  "concept:specializationof": {
+    "name": "specializationof"
+  },
+  "concept:sportfansincountry": {
+    "name": "sportfansincountry"
+  },
+  "concept:sporthassportsteamposition": {
+    "name": "sporthassportsteamposition"
+  },
+  "concept:sportschoolincountry": {
+    "name": "sportschoolincountry"
+  },
+  "concept:sportsgamesport": {
+    "name": "sportsgamesport"
+  },
+  "concept:sportsgameteam": {
+    "name": "sportsgameteam"
+  },
+  "concept:sportsgamewinner": {
+    "name": "sportsgamewinner"
+  },
+  "concept:sportusesequipment": {
+    "name": "sportusesequipment"
+  },
+  "concept:sportusesstadium": {
+    "name": "sportusesstadium"
+  },
+  "concept:stadiumlocatedincity": {
+    "name": "stadiumlocatedincity"
+  },
+  "concept:statehascapital": {
+    "name": "statehascapital"
+  },
+  "concept:statelocatedincountry": {
+    "name": "statelocatedincountry"
+  },
+  "concept:statelocatedingeopoliticallocation": {
+    "name": "statelocatedingeopoliticallocation"
+  },
+  "concept:stateorprovinceisborderedbystateorprovince": {
+    "name": "stateorprovinceisborderedbystateorprovince"
+  },
+  "concept:subpartof": {
+    "name": "subpartof"
+  },
+  "concept:subpartoforganization": {
+    "name": "subpartoforganization"
+  },
+  "concept:synonymfor": {
+    "name": "synonymfor"
+  },
+  "concept:teamalsoknownas": {
+    "name": "teamalsoknownas"
+  },
+  "concept:teamhomestadium": {
+    "name": "teamhomestadium"
+  },
+  "concept:teamplaysagainstteam": {
+    "name": "teamplaysagainstteam"
+  },
+  "concept:teamplaysincity": {
+    "name": "teamplaysincity"
+  },
+  "concept:teamplaysinleague": {
+    "name": "teamplaysinleague"
+  },
+  "concept:teamplayssport": {
+    "name": "teamplayssport"
+  },
+  "concept:teamwontrophy": {
+    "name": "teamwontrophy"
+  },
+  "concept:televisionstationaffiliatedwith": {
+    "name": "televisionstationaffiliatedwith"
+  },
+  "concept:televisionstationincity": {
+    "name": "televisionstationincity"
+  },
+  "concept:thinghascolor": {
+    "name": "thinghascolor"
+  },
+  "concept:thinghasshape": {
+    "name": "thinghasshape"
+  },
+  "concept:topmemberoforganization": {
+    "name": "topmemberoforganization"
+  },
+  "concept:touristattractionsuchastouristattraction": {
+    "name": "touristattractionsuchastouristattraction"
+  },
+  "concept:transportationincity": {
+    "name": "transportationincity"
+  },
+  "concept:visualartistartform": {
+    "name": "visualartistartform"
+  },
+  "concept:weaponmadeincountry": {
+    "name": "weaponmadeincountry"
+  },
+  "concept:weaponssuchasweapons": {
+    "name": "weaponssuchasweapons"
+  },
+  "concept:worksfor": {
+    "name": "worksfor"
+  }
+}

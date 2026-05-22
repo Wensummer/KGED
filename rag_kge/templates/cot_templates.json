@@ -1,0 +1,80 @@
+[
+  {
+    "id": "hypernym_hierarchy_v1",
+    "applicable_relations": ["_hypernym", "_instance_hypernym"],
+    "applicable_patterns": ["hierarchical"],
+    "required_evidence": ["entity_desc", "internal_neighborhood", "external_text"],
+    "steps": [
+      "提取头尾实体的定义/类型关键词，判断二者的上下位关系是否合理。",
+      "查看内部图邻域：是否存在相同关系的父/子冲突、循环或同级并列。",
+      "对比外部文本定义：父类是否涵盖子类语义，是否存在反向或无关定义。",
+      "综合内部+外部证据，给出结论；若证据不足，标记 unknown 并说明缺失内容。"
+    ],
+    "decision_rule": "内部层次冲突或循环优先判 incorrect；外部定义支持且无内部冲突则判 correct；证据不足则 unknown。"
+  },
+  {
+    "id": "partof_consistency_v1",
+    "applicable_relations": ["_has_part", "_part_of"],
+    "applicable_patterns": ["compositional"],
+    "required_evidence": ["entity_desc", "internal_neighborhood", "external_text"],
+    "steps": [
+      "识别整体-部分语义：头是否可作为整体，尾是否可作为部分。",
+      "检查内部邻域是否存在反向边、并列自反或同级冲突，记录潜在异常。",
+      "对比外部文本：是否描述部件-整体关系，是否有反向或无关描述。",
+      "综合判断：反向/同级冲突优先判 incorrect；一致则 correct；证据不足则 unknown。"
+    ],
+    "decision_rule": "若发现反向或自反冲突，倾向 incorrect；外部和内部均支持则 correct。"
+  },
+  {
+    "id": "derivational_symmetry_v1",
+    "applicable_relations": ["_derivationally_related_form", "_also_see"],
+    "applicable_patterns": ["symmetric_or_near_synonym"],
+    "required_evidence": ["entity_desc", "internal_neighborhood", "external_text"],
+    "steps": [
+      "判断两词语是否近义/派生相关，提取核心语义。",
+      "检查内部邻域是否显示对称性或存在明显语义不一致。",
+      "外部文本验证语义相似度，是否属于同一语义簇。",
+      "综合给结论；语义冲突则 incorrect，弱证据则 unknown。"
+    ],
+    "decision_rule": "语义接近且无冲突则 correct；语义不相关或反向冲突则 incorrect。"
+  },
+  {
+    "id": "domain_topic_v1",
+    "applicable_relations": ["_synset_domain_topic_of"],
+    "applicable_patterns": ["domain_topic"],
+    "required_evidence": ["entity_desc", "external_text"],
+    "steps": [
+      "提取实体的领域/主题关键词。",
+      "外部文本检索是否匹配该领域；若无外部证据，注明缺失。",
+      "内部若有主题相关邻域，补充交叉验证。",
+      "综合判断：主题匹配强则 correct，不匹配则 incorrect，缺证据则 unknown。"
+    ],
+    "decision_rule": "主题关键词匹配度决定结论，缺外部证据时降低置信。"
+  },
+  {
+    "id": "antisymmetry_check_v1",
+    "applicable_relations": [],
+    "applicable_patterns": ["antisymmetric"],
+    "required_evidence": ["internal_neighborhood", "entity_desc"],
+    "steps": [
+      "检查是否存在尾指向头的同关系反向边；若关系应反对称，标记强可疑。",
+      "结合实体语义，判断方向是否合理，记录任何循环/自反现象。",
+      "若发现反向且关系反对称，优先判 incorrect；否则根据其他证据决定。",
+      "证据不足时标记 unknown，并说明缺失。"
+    ],
+    "decision_rule": "反对称关系若出现反向边，优先 incorrect；否则回落到其他证据。"
+  },
+  {
+    "id": "generic_compare_v1",
+    "applicable_relations": [],
+    "applicable_patterns": [],
+    "required_evidence": ["entity_desc", "internal_neighborhood", "external_text"],
+    "steps": [
+      "总结头尾实体的核心含义/类型。",
+      "检查内部邻域中是否有支持或冲突的关系/相似三元组。",
+      "外部文本检索是否支持该关系或给出冲突信息。",
+      "若有替代三元组（A1..Ak），对比哪个最合理；缺证据则 unknown。"
+    ],
+    "decision_rule": "多源一致则 correct；多源冲突或替代更合理则 incorrect；证据不足则 unknown。"
+  }
+]

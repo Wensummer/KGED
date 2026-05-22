@@ -1,0 +1,222 @@
+[
+  {
+    "id": "structure_conflict_gate_v2",
+    "stage": "structural",
+    "applicable_patterns": ["antisymmetric", "hierarchical", "compositional", "type_sensitive"],
+    "required_evidence": ["relation_definition", "structural_signals", "internal_neighborhood"],
+    "steps": [
+      "先根据关系定义判断该关系是否具有方向性、层级性、部分-整体或类型约束。",
+      "检查结构信号中的自环、反向同关系边、同关系邻域分布和 KGE 异常先验，识别强冲突。",
+      "核对局部子图是否存在与候选三元组一致的近邻或路径支持；若支持弱于冲突，则优先判 incorrect。",
+      "只有当结构证据高度单一且置信充足时才设置 should_stop=true，否则保持 false。"
+    ],
+    "decision_rule": "明显结构冲突优先 incorrect；结构支持充分且无冲突可 correct；证据不足则 unknown。"
+  },
+  {
+    "id": "structure_generic_gate_v2",
+    "stage": "structural",
+    "applicable_patterns": [],
+    "required_evidence": ["relation_definition", "structural_signals", "internal_neighborhood"],
+    "steps": [
+      "总结头实体、关系和尾实体在局部图中的连接模式。",
+      "根据结构信号判断候选三元组是缺乏支持、存在冲突，还是具有明显同类支持。",
+      "如果仅凭结构证据无法稳定区分 correct 与 incorrect，则输出 unknown 并保留 should_stop=false。"
+    ],
+    "decision_rule": "结构证据仅作第一层筛查，除非高置信，否则不要过早下结论。",
+    "is_fallback": true
+  },
+  {
+    "id": "semantic_topic_validation_v2",
+    "stage": "semantic",
+    "applicable_patterns": ["domain_topic"],
+    "required_evidence": ["relation_definition", "external_text", "quality_scores"],
+    "steps": [
+      "阅读高质量外部证据，抽取主题词、领域词或地域词。",
+      "判断这些主题词是否与候选关系要求的语义方向一致。",
+      "当多条高质量证据方向一致时，提高 evidence_consistency，并可设置 should_stop=true。",
+      "如果证据只描述实体本身但不支撑关系事实，输出 unknown。"
+    ],
+    "decision_rule": "主题/领域词强匹配可 correct；明显不匹配可 incorrect；弱匹配或间接描述则 unknown。"
+  },
+  {
+    "id": "semantic_consistency_gate_v2",
+    "stage": "semantic",
+    "applicable_patterns": [],
+    "required_evidence": ["relation_definition", "external_text", "quality_scores"],
+    "steps": [
+      "优先关注质量分高的外部证据，分别判断每条证据是支持、反驳还是无关。",
+      "比较证据之间是否同向；若高质量证据基本一致，则提高 evidence_consistency。",
+      "如果外部证据能够直接支撑或反驳候选三元组，可输出高置信结论并设置 should_stop=true。",
+      "如果证据仅提供背景信息、无法验证关系本身，则输出 unknown。"
+    ],
+    "decision_rule": "高质量证据同向时可早停；证据冲突或间接时不要早停。"
+  },
+  {
+    "id": "hybrid_contrastive_resolution_v2",
+    "stage": "hybrid",
+    "applicable_patterns": [],
+    "required_evidence": ["relation_definition", "structural_signals", "internal_neighborhood", "external_text", "alternatives"],
+    "steps": [
+      "先总结结构证据与外部证据分别支持什么结论，再指出它们是否冲突。",
+      "对比候选三元组和替代三元组 A1..Ak，判断哪个更符合关系定义、局部图模式和外部文本。",
+      "若结构与语义证据一致，则给出最终结论；若冲突，说明哪一侧证据质量更高、为什么。",
+      "最终输出单一结论，并用 evidence_used 与 risk_flags 标明主要依据和残余风险。"
+    ],
+    "decision_rule": "多源证据一致时直接给最终结论；冲突时以高质量、直接、关系对齐的证据为主。",
+    "is_fallback": true
+  },
+
+  {
+    "id": "family_rel_card_v1",
+    "stage": "cot",
+    "level": "family",
+    "template_family": "T_rel",
+    "name": "关系约束类模板",
+    "focus": "关系语义约束、类型一致性、方向性与规则冲突"
+  },
+  {
+    "id": "family_path_card_v1",
+    "stage": "cot",
+    "level": "family",
+    "template_family": "T_path",
+    "name": "路径支持类模板",
+    "focus": "邻域一致性、多跳路径、局部结构支撑强度"
+  },
+  {
+    "id": "family_ext_card_v1",
+    "stage": "cot",
+    "level": "family",
+    "template_family": "T_ext",
+    "name": "外部事实类模板",
+    "focus": "图外文本核验、属性归纳与时效一致性"
+  },
+  {
+    "id": "family_conf_card_v1",
+    "stage": "cot",
+    "level": "family",
+    "template_family": "T_conf",
+    "name": "证据冲突类模板",
+    "focus": "图内外冲突裁决、来源可靠性与证据强度权衡"
+  },
+
+  {
+    "id": "rel_type_rule_check_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_rel",
+    "applicable_patterns": ["type_sensitive", "hierarchical"],
+    "required_evidence": ["structural_signals", "internal_neighborhood", "evidence_package"],
+    "steps": [
+      "核对头尾实体是否满足关系的语义域和值域要求。",
+      "检查局部子图中是否存在同关系互斥模式、功能性冲突或类型错配。",
+      "结合统一证据向量中的 conflict/support 分量，给出关系约束视角结论。",
+      "若约束冲突明确且无强反证，优先判 incorrect。"
+    ],
+    "decision_rule": "关系约束冲突明确时优先 incorrect；约束成立且结构支持稳定时可 correct。"
+  },
+  {
+    "id": "rel_directionality_check_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_rel",
+    "applicable_patterns": ["antisymmetric", "compositional"],
+    "required_evidence": ["structural_signals", "internal_neighborhood"],
+    "steps": [
+      "检查候选三元组是否与关系方向性要求冲突（反向边、自环、反对称违规）。",
+      "对比局部图中更稳定的关系方向分布，判断当前方向是否异常。",
+      "若方向冲突与结构先验一致，直接提高错误置信度。"
+    ],
+    "decision_rule": "方向性冲突强时直接判 incorrect；方向性无冲突则回退到其他证据。",
+    "is_fallback": true
+  },
+
+  {
+    "id": "path_neighborhood_support_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_path",
+    "applicable_patterns": [],
+    "required_evidence": ["structural_signals", "internal_neighborhood", "evidence_package"],
+    "steps": [
+      "评估同关系邻域支持强度与局部一致性。",
+      "比较支持分量与冲突分量，判断候选事实处于支持区、冲突区还是模糊区。",
+      "若结构支持持续偏弱且缺少补充证据，优先输出 unknown 或 incorrect。"
+    ],
+    "decision_rule": "路径/邻域支持不足且无外部强支持时，不宜判高置信 correct。"
+  },
+  {
+    "id": "path_multihop_pattern_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_path",
+    "applicable_patterns": ["hierarchical", "domain_topic"],
+    "required_evidence": ["structural_signals", "internal_neighborhood"],
+    "steps": [
+      "检查头尾实体之间的两跳及局部模式是否对目标关系形成可传播支撑。",
+      "对比候选事实与相似局部模式事实的结构一致性，识别隐蔽缺支撑错误。",
+      "若多跳模式缺失且关系本身需要结构传播支撑，则降低正确置信度。"
+    ],
+    "decision_rule": "多跳结构无法支撑时偏向 incorrect/unknown；模式一致时可提升 correct 置信。",
+    "is_fallback": true
+  },
+
+  {
+    "id": "ext_direct_fact_verify_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_ext",
+    "applicable_patterns": [],
+    "required_evidence": ["external_text", "quality_scores", "evidence_package"],
+    "steps": [
+      "优先读取高质量文本并抽取与候选关系直接对齐的事实表达。",
+      "汇总支持/反驳证据方向与一致性，判断图外证据是否可直接确认。",
+      "当支持方向高一致且内部无强冲突时，可给出高置信 correct。"
+    ],
+    "decision_rule": "高质量外部证据直接同向支持时可确认 correct；直接反驳时判 incorrect。"
+  },
+  {
+    "id": "ext_temporal_validate_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_ext",
+    "applicable_patterns": ["time_sensitive"],
+    "required_evidence": ["external_text", "quality_scores", "evidence_package"],
+    "steps": [
+      "针对时间敏感关系，抽取文本中的时间线索与发布时间。",
+      "判断候选事实在当前时间语境是否仍成立，避免过时事实误判。",
+      "对比支持与反驳证据在时效性上的优势，给出最终判断。"
+    ],
+    "decision_rule": "同向且新近证据优先；若关键证据过旧或冲突明显，降低置信或判 unknown。",
+    "is_fallback": true
+  },
+
+  {
+    "id": "conf_internal_external_resolve_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_conf",
+    "applicable_patterns": [],
+    "required_evidence": ["structural_signals", "external_text", "evidence_package", "alternatives"],
+    "steps": [
+      "分别总结图内结构证据与图外文本证据的结论方向。",
+      "评估双方证据质量与直接性，优先采纳更直接、质量更高且关系对齐的证据。",
+      "结合替代候选比较，确认最终结论是否需要从 candidate 切换到 A1..Ak。"
+    ],
+    "decision_rule": "证据冲突时以高质量、直接、时效更强的一侧为主；无法裁决时输出 unknown。"
+  },
+  {
+    "id": "conf_source_weighting_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_conf",
+    "applicable_patterns": ["domain_topic", "type_sensitive"],
+    "required_evidence": ["external_text", "quality_scores", "evidence_package", "alternatives"],
+    "steps": [
+      "在支持与反驳并存时，比较来源权威性、相关性与时效性，不做简单票数比较。",
+      "识别“支持多但弱、反驳少但强”或反向不对称情形，按证据强度而非数量裁决。",
+      "输出最终结论并标记残余风险，必要时保守输出 unknown。"
+    ],
+    "decision_rule": "来源可靠且表达直接的一侧优先；证据强度接近时保持保守。",
+    "is_fallback": true
+  }
+]

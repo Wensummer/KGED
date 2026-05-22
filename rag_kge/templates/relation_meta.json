@@ -1,0 +1,12 @@
+{
+  "_hypernym": ["hierarchical", "antisymmetric"],
+  "_instance_hypernym": ["hierarchical", "antisymmetric"],
+  "_has_part": ["compositional", "antisymmetric"],
+  "_part_of": ["compositional", "antisymmetric"],
+  "_member_meronym": ["compositional", "antisymmetric"],
+  "_member_of_domain_region": ["domain_topic"],
+  "_member_of_domain_topic": ["domain_topic"],
+  "_synset_domain_topic_of": ["domain_topic"],
+  "_also_see": ["symmetric_or_near_synonym"],
+  "_derivationally_related_form": ["symmetric_or_near_synonym"]
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "rel_geo_containment_rule_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_rel",
+    "applicable_patterns": ["antisymmetric", "type_sensitive", "compositional"],
+    "applicable_relations": [
+      "/location/location/contains",
+      "/location/location/partially_contains",
+      "/location/country/capital",
+      "concept:citylocatedincountry",
+      "concept:citycapitalofcountry",
+      "concept:locationlocatedwithinlocation"
+    ],
+    "required_evidence": ["structural_signals", "internal_neighborhood", "evidence_package"],
+    "steps": [
+      "检查候选关系是否违反地理/组织容纳关系的方向性（例如 child->parent 方向错位或反向同关系冲突）。",
+      "核对局部图中同关系邻域是否支持该方向，并关注反向边与自环异常。",
+      "结合统一证据包中的 conflict/support 分量，判断该关系是否符合约束。",
+      "若方向与类型约束同时冲突，优先判 incorrect。"
+    ],
+    "decision_rule": "地理/容纳类关系以方向与类型约束为先，冲突明确时优先 incorrect。"
+  },
+  {
+    "id": "rel_role_membership_constraint_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_rel",
+    "applicable_patterns": ["type_sensitive", "domain_topic"],
+    "applicable_relations": [
+      "/organization/organization_member/member_of./organization/organization_membership/organization",
+      "/sports/pro_athlete/teams./sports/sports_team_roster/team",
+      "concept:athleteplaysforteam",
+      "concept:agentbelongstoorganization",
+      "concept:ceoof"
+    ],
+    "required_evidence": ["structural_signals", "internal_neighborhood", "evidence_package"],
+    "steps": [
+      "核对头尾实体的角色类型是否与关系定义匹配（人-组织、运动员-球队、职位-公司等）。",
+      "检查局部图中是否出现互斥角色分配或不合理重复归属。",
+      "当类型错配与结构冲突同时出现时，提高错误置信度。"
+    ],
+    "decision_rule": "角色/归属关系优先检查类型一致性；类型错配且结构冲突时判 incorrect。"
+  },
+  {
+    "id": "path_peer_context_support_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_path",
+    "applicable_patterns": ["domain_topic", "type_sensitive"],
+    "required_evidence": ["structural_signals", "internal_neighborhood", "evidence_package"],
+    "steps": [
+      "在同类实体子图中查找与候选关系同构的邻域支持（peer context）。",
+      "比较候选事实与近邻事实在连接模式上的一致程度，识别局部孤立边。",
+      "若候选边在同类上下文中缺乏支撑且冲突分量更高，降低正确置信度。"
+    ],
+    "decision_rule": "同类上下文支撑弱时偏向 unknown/incorrect；上下文一致时可提升 correct。"
+  },
+  {
+    "id": "path_compose_bridge_validate_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_path",
+    "applicable_patterns": ["compositional", "hierarchical"],
+    "required_evidence": ["structural_signals", "internal_neighborhood", "alternatives"],
+    "steps": [
+      "检查候选关系是否可由局部组合路径桥接支持（例如 parent->child->grandchild 或 member->group->domain）。",
+      "若存在替代候选 A1..Ak，比较谁与组合路径更一致。",
+      "当 candidate 与路径桥接矛盾但替代候选更一致时，优先记录 best_choice 为替代候选。"
+    ],
+    "decision_rule": "组合路径支撑优先；candidate 与路径矛盾且存在更优替代时，降低 candidate 置信。"
+  },
+  {
+    "id": "ext_demographic_fact_check_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_ext",
+    "applicable_patterns": ["type_sensitive", "domain_topic"],
+    "applicable_relations": [
+      "/people/person/nationality",
+      "/people/person/place_of_birth",
+      "/people/person/gender",
+      "concept:citylocatedincountry",
+      "concept:countrycurrency",
+      "concept:languageofcountry"
+    ],
+    "required_evidence": ["external_text", "quality_scores", "evidence_package"],
+    "steps": [
+      "优先抽取外部文本中的明确属性事实（国籍、出生地、语言、货币等）。",
+      "过滤仅提及背景但未直接支持关系的证据。",
+      "比较支持与反驳证据的质量分和直接性，给出外部核验结论。"
+    ],
+    "decision_rule": "属性事实有直接文本证据时可高置信；仅背景描述时保持 unknown。"
+  },
+  {
+    "id": "ext_event_time_consistency_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_ext",
+    "applicable_patterns": ["time_sensitive"],
+    "required_evidence": ["external_text", "quality_scores", "evidence_package"],
+    "steps": [
+      "抽取外部证据中的时间表达并与关系语义对齐（任期、发布时间、发生时间）。",
+      "若支持与反驳证据来自不同时期，优先使用时效更近且表达更直接的证据。",
+      "当时间冲突无法消解时，保守输出 unknown，并标记风险。"
+    ],
+    "decision_rule": "时间敏感关系以时效更近、表达更直接的证据优先。"
+  },
+  {
+    "id": "conf_support_refute_margin_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_conf",
+    "applicable_patterns": ["domain_topic", "type_sensitive"],
+    "required_evidence": ["external_text", "quality_scores", "evidence_package", "alternatives"],
+    "steps": [
+      "分别汇总支持与反驳证据的质量加权总量，不只看条数。",
+      "比较双方 margin（强支持-强反驳），识别“数量多但证据弱”的误导情形。",
+      "若 margin 接近且结构冲突较高，优先输出 unknown 或 incorrect。"
+    ],
+    "decision_rule": "冲突裁决看质量加权 margin；margin 小时保持保守。"
+  },
+  {
+    "id": "conf_alt_candidate_override_v1",
+    "stage": "cot",
+    "level": "instance",
+    "template_family": "T_conf",
+    "applicable_patterns": ["compositional", "hierarchical", "antisymmetric"],
+    "required_evidence": ["structural_signals", "external_text", "evidence_package", "alternatives"],
+    "steps": [
+      "当 candidate 与证据冲突时，逐一对比 A1..Ak 与核心证据的一致性。",
+      "如果存在替代候选在结构和语义上同时更优，明确 best_choice 并解释替换理由。",
+      "若无替代候选显著优于 candidate，则保守维持 candidate 并降低置信度。"
+    ],
+    "decision_rule": "冲突场景下允许候选替换，但必须有结构+语义双重优势。"
+  }
+]
